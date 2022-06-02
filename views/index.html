@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&family=Josefin+Sans:ital,wght@1,300&family=Kanit:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="icon" href="resources/assets/icon/codigo.png">
+    <title>Portal de servicios Web - Empresa Insumos electricos</title>
+</head>
+<body>
+    <header class="header">
+        <img src="resources/assets/icon/menu.png" alt="menu mobile" class="nav-bar" id="btnMenu">        
+        <nav class="main-nav">       
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">About Us</a></li>
+
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn">Services <img src="resources/assets/icon/flecha-hacia-abajo.png" alt=""></a>
+                        <ul class="submenu">
+                            <li class="menu__item"><a href="#" class="menu__link">Salary simulator</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Inventory control</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">RPA</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Dashboard</a></li>
+                        </ul>
+                 </li>
+                
+                 <li class="menu__item"><a href="#" class="menu__link">Shop</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>   
+            </ul>
+        </nav>    
+    </header>
+    
+    <main class="main-container">
+        <section class="card-main">
+            <h2>El usuario conectado es: <%= msg %></h2>
+        </section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+        <section class="card-main"></section>
+   
+        
+        <div class="btn-flotante">
+            <a href="/login" >Log In</a>           
+        </div >
+    </main>
+
+    <footer class="footer">
+        <div class="container">      
+            <section class="footer-card">
+                <h4>Contact Us</h4>
+                <p><strong>Call: </strong>3045751720-3142466031</p>
+                <p><strong>Email: </strong>servicios@innovation.com.co</p>
+                <p><strong>Schedule: </strong>Monday- Friday: 8am-5pm</p>
+            </section>
+
+            <section class="footer-card">
+                <h4>Follow Us</h4>
+                <img src="resources/assets/icon/whatsapp.png" alt="">
+                <img src="resources/assets/icon/linkedin.png" alt="">
+                <img src="resources/assets/icon/twiter.png" alt="">
+                <img src="resources/assets/icon/github.png" alt="">
+                <img src="resources/assets/icon/logotipo-de-instagram.png" alt="">
+
+            </section>
+
+            <section class="footer-card">
+                <h4>Mailing list</h4>
+                <p>Want to know what we're up? Sign up for the newsletter an join our tribe</p>
+                <form action="#">
+                    <input type="mail">
+                    <button type="button">Sucribe</button>
+                </form>
+            </section>
+        
+            <section class="footer-card">
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Answers for Everyone All Rights Reserved</p>
+            </section>
+        </div>
+    </footer>
+
+
+
+
+    <script src="resources/js/menu.js"></script> 
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style_login.css">
+    <link rel="icon" href="resources/assets/icon/add-user.png">
+    <title>Create User</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Registro de usuarios</h1>    
+        <img src="resources/assets/icon/add.png" alt="" class="logo">
+    </header>
+    
+    <div class="login">
+        <h3>Diligencie los siguientes campos:</h3>
+
+        <form action="register" method="POST">
+            <input type="text" name="user" id="user" placeholder="Usuario" required="required" />
+            <input type="text" name="name" id="name" placeholder="Nombre completo" required="required" />
+            <input type="text" name="email" id="email" placeholder="Correo Electronico" required="required" />
+            <div id="emailOK"></div>
+            <hr>
+            <label for="rol">Seleccione tipo de rol:</label>
+            <select name="rol" id="rol" class="select-css" required>
+                <option value=""></option>
+                <option value="admin">Admin</option>
+                <option value="data entry">Data Entry</option>
+            </select>
+            <hr>
+            <input type="password" name="pass" id="pass" placeholder="Contraseña" required="required" />
+            <div id="passOk"></div>
+            <input type="password" name="r-password" id="r-password" placeholder="Repita la Contraseña" required="required" />
+            <input type="submit" class="btn btn-primary btn-block btn-large" value="Guardar" id="guardar" disabled></input>
+        </form>
+
+        <a href="/" class="btn-cancel" type="submit">Cancelar</a>    
+    </div>
+    
+<!-- Alerta tipo sweatAlert para ejs--->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<% if(typeof alert != "undefined") { %>
+    <script>
+        Swal.fire({
+            title:"<%= alertTitle %>",
+            text:"<%= alertMessage %>",
+            icon:"<%= alertIcon %>",
+            showConfirmButton:<%= showConfirmButton %>,
+            timer: <%= timer %>
+        }).then(()=>{
+            window.location="/<%= ruta %>"
+        })
+    </script>
+<%}%>
+
+<script src="resources/js/validateMail.js"></script>
+
+</body>
+</html>

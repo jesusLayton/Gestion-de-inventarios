@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style_login.css">
+    <link rel="icon" href="resources/assets/icon/perfil.png">
+    <title>Login</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title"> Bienvenido Portal de Administración</h1>    
+        <img src="resources/assets/icon/inventario.png" alt="" class="logo">
+    </header>
+    
+    <div class="login">
+        <h1>Login</h1>
+        <form action="/auth" method="POST">
+            <input type="text" name="user" id="user" placeholder="Usuario" required="required" />
+            <input type="password" name="password" id="password" placeholder="Contraseña" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Iniciar Sesión</button>
+        </form>
+        <a href="forgot_password" class="link">¿Has olvidado la contraseña?</a>    
+    </div>
+    
+
+    <!-- Alerta tipo sweatAlert para ejs--->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:"<%= alertTitle %>",
+                text:"<%= alertMessage %>",
+                icon:"<%= alertIcon %>",
+                showConfirmButton:<%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(()=>{
+                window.location="/<%= ruta %>"
+            })
+        </script>
+    <%}%>
+
+
+
+    
+</body>
+</html>
