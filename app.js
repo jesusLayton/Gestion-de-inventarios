@@ -74,6 +74,10 @@ app.get('/forgot_password',(req,res)=>{
     res.render('forgot_password')
 })
 
+app.get('/productos',(req,res)=>{
+    res.render('productos')
+})
+
 
 
 //10.  Creacion de usuario
